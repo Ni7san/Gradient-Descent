@@ -32,8 +32,8 @@ for iter = 1:num_iters,
     secvector=X'*prediction;
     secvector=alpha*1/m*secvector;
     temp=theta-secvector;
+    theta=temp
     J_history(iter) = computeCost(X, y, theta);
-    theta=temp;
+
 
 end;
-
